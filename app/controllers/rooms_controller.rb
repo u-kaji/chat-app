@@ -9,7 +9,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      rediret_to root_path
+      redirect_to root_path
     else
       render :new
     end
